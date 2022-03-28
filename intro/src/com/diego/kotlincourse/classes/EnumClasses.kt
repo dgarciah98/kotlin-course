@@ -3,7 +3,7 @@ package com.diego.kotlincourse.classes
 enum class Priority(val value: Int) {
     MINOR(-1) {
         override fun text(): String {
-            TODO("Not yet implemented")
+            return "[MINOR PRIORITY]"
         }
 
         override fun toString(): String {
@@ -36,6 +36,7 @@ fun main(args: Array<String>){
     println(Priority.CRITICAL.value)
     println(Priority.CRITICAL.ordinal)
     println(Priority.CRITICAL.name)
+    println(priority.text())
 
     for(priorityInList in Priority.values())
         println(priorityInList)
@@ -43,4 +44,5 @@ fun main(args: Array<String>){
     val p = Priority.valueOf("MAJOR")
 
     println(p.ordinal)
+
 }
