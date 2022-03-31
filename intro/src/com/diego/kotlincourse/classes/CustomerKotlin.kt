@@ -1,9 +1,18 @@
 package com.diego.kotlincourse.classes
 
-data class CustomerKotlin(var id: Int, var name: String, var email: String){
+data class CustomerKotlin(var id: Int, var name: String, var email: String, val phone: String?){
+    @JvmField val someProperty = "Value"
     override fun toString(): String {
         return "{\"id\": \"$name\", \"name\": \"$name\"}"
     }
+    fun changeStatus(status: Status){
+
+    }
+}
+
+enum class Status {
+    Current,
+    Past
 }
 
 fun main(args: Array<String>){
