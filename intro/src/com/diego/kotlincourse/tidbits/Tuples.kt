@@ -23,7 +23,7 @@ fun main(args: Array<String>) {
     println(continent)
     println(population)
 
-    val (id,name,email) = CustomerKotlin(1, "diego","email@email")
+    val (id,name,email) = CustomerKotlin(1, "diego","email@email", null)
 
     val listCapitalsAndCountries =
         listOf(Pair("Madrid","Spain"),"Paris" to "France") // 'to' operator works the same as a tuple
