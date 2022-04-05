@@ -31,6 +31,8 @@ val albums = listOf(
 )
 
 fun albumAndTrackLowerThanXSeconds(durationInSeconds: Int, albums: List<Album>): List<Pair<String,String>>{
+    // [a, b, c] f(x) => [f(a), f(b), f(c)]
+    // [[a, b], [c, d]] f(x) => [f(a), f(b), f(c), f(d)]
     return albums.flatMap {
         val album = it.title
         it.tracks.filter {
@@ -61,5 +63,9 @@ fun main(args: Array<String>) {
     val titles = albums.filter { it.chartUK == 1 }
         .map { Pair(it.title, it.year) }
     titles.forEach { println(it) }
+
+    albumAndTrackLowerThanXSeconds(200, albums).forEach {
+        println(it.first)
+    }
 }
 
