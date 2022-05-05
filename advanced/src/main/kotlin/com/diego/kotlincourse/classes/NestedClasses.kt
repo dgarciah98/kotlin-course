@@ -6,9 +6,11 @@ class DirectoryExplorer(val user: String = "") {
         permissionCheck.validatePermission()
     }
 
-    class PermissionCheck {
+    inner class PermissionCheck {
         fun validatePermission() {
+            if(user != "diego"){
 
+            }
         }
 
     }
@@ -16,5 +18,6 @@ class DirectoryExplorer(val user: String = "") {
 
 fun main(args: Array<String>) {
     val de = DirectoryExplorer("diego")
-    val pc = DirectoryExplorer.PermissionCheck()
+    //val pc = DirectoryExplorer.PermissionCheck()
+    val pc = DirectoryExplorer().PermissionCheck() // when using 'inner'
 }
